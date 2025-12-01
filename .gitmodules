@@ -4,3 +4,6 @@
 [submodlue "nice-view-battery"]
 	path = nice-view-battery
 	url = https://github.com/infely/nice-view-battery
+[submodule "nice-view-battery"]
+	path = nice-view-battery
+	url = https://github.com/infely/nice-view-battery
