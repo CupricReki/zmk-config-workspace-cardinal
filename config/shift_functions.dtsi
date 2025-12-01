@@ -23,8 +23,9 @@
   }; \
 };
 
+// RDP-compatible macro with tap delay (see: https://github.com/zmkfirmware/zmk/issues/759)
 #define SHIFT_MACRO(NAME, BINDING, SHIFT_BINDING) \
-U_MACRO(u_macro_ ## NAME, wait-ms = <0>; bindings = <SHIFT_BINDING>;) \
+U_MACRO(u_macro_ ## NAME, wait-ms = <10>; tap-ms = <10>; bindings = <SHIFT_BINDING>;) \
 SHIFT_FUNCTION(NAME, BINDING, &u_macro_ ## NAME)
 
 // tap=select profile, shift+tap=clear profile
@@ -35,7 +36,7 @@ SHIFT_MACRO(u_bt_sel_3, &bt BT_SEL 3, &bt BT_SEL 3 &bt BT_CLR)
 SHIFT_MACRO(u_bt_sel_4, &bt BT_SEL 4, &bt BT_SEL 4 &bt BT_CLR)
 
 // tap=caps word, shift+tap=caps
-SHIFT_FUNCTION(u_caps_word, &caps_word, &kp CAPS)
+SHIFT_MACRO(u_caps_word, &caps_word, &kp CAPS)
 
 // tap=toggle output, shift+tap=USB output
 SHIFT_FUNCTION(u_out_tog, &out OUT_TOG, &out OUT_USB)

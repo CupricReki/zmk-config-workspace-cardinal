@@ -38,6 +38,7 @@
 #define SYM 4
 #define NUM 5
 #define FUN 6
+#define FN FUN  // Alias for mouse.dtsi compatibility
 #define BUT 7
 #define GAME 8
 #define GAMENUM 9
@@ -75,7 +76,7 @@ ZMK_HOLD_TAP(hml,
     flavor = "balanced";
     tapping-term-ms = <170>;
     quick-tap-ms = <175>;
-    require-prior-idle-ms = <90>;
+    require-prior-idle-ms = <80>;
     bindings = <&kp>, <&kp>;
     hold-trigger-key-positions = <KEYS_R THUMBS>;
     hold-trigger-on-release;
@@ -98,12 +99,10 @@ ZMK_HOLD_TAP(hmr,
 #include "mouse.dtsi"
 #include "shift_functions.dtsi"
 #include "custom_behaviors.dtsi"
-#include "../miryoku_zmk/miryoku/miryoku_shift_functions.dtsi"
-#include "../miryoku_zmk/miryoku/miryoku_kludge_tapdelay.h"
 
 // Interesting feature, usefull for cases with hard to reach on/off switches
 &soft_off {
-    hold-time-ms = <2000>; // Only turn off it the key is held for 2 seconds or longer.
+    hold-time-ms = <2000>; // Only turn off if the key is held for 2 seconds or longer.
 };
 
 

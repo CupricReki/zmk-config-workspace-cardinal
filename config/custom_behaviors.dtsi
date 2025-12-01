@@ -1,4 +1,4 @@
-// Douple tap to bootloader
+// Double tap to bootloader
 ZMK_BEHAVIOR(td_bootloader, tap_dance,
   tapping-term-ms = <200>;
   bindings = <XXX>, <&bootloader>;

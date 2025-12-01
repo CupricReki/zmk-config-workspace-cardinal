@@ -17,6 +17,7 @@
 #define DEF 0
 #define NAV 1
 #define FN 2
+#define FUN FN  // Alias for mouse.dtsi compatibility
 #define NUM 3
 #define SYS 4
 #define MOUSE 5
