@@ -3,4 +3,4 @@
 	url = https://github.com/manna-harbour/miryoku_zmk
 [submodlue "nice-view-battery"]
 	path = nice-view-battery
-	url = https://github.com/infely
+	url = https://github.com/infely/nice-view-battery
