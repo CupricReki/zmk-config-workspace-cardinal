@@ -1,3 +1,6 @@
 [submodule "miryoku_zmk"]
 	path = miryoku_zmk
 	url = https://github.com/manna-harbour/miryoku_zmk
+[submodlue "nice-view-battery"]
+	path = nice-view-battery
+	url = https://github.com/infely
